@@ -1,0 +1,40 @@
+<body>
+
+<header>
+    <ul>
+        <li>XXXX</li>
+        <li>XXXX</li>
+        <li>XXXX</li>
+    </ul>
+</header>
+
+<div class="top-page">
+    <h1>Read Book Library</h1>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>The day I read</th>
+        <th>Impressions</th>
+    </tr>
+
+    <% @books.each do |book| %>
+
+    <tr>
+        <td><%= book.id%></td>
+        <td><%= book.title%></td>
+        <td><%= book.author%></td>
+        <td><%= book.day%></td>
+        <td><%= link_to 'here', "https://www.pixiv.net/", 
+:onclick=>"window.open(this.href,'hoge', 'height=400, width=800');return false;" %></td>
+    </tr>
+    
+    <% end %>
+
+</table>
+
+</div>
+
+</body>
